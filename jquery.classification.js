@@ -131,7 +131,7 @@
      * Classification plugin default settings.
      * 
      * @cfg $.fn.classification.defaults.dynamic {Boolean} [dynamic = false]
-     * True if the page uses dynamic classification.
+     * True if you want to display "Dynamic page" in the banner.
      * 
      * @cfg $.fn.classification.level {String} [level = 'U-FOUO']
      * A string representing the classification level, any compartments, and dissemination.
@@ -163,8 +163,8 @@
         var level = txt.charAt(0);
         var bannerText = text[txt];
 
-        // If no dynamic banner is desired ... 
-        if (!settings.dynamicBanner) {
+        // If no dynamic banner is desired and dynamic text is desired ... 
+        if (!settings.dynamicBanner && settings.dynamic) {
             // then we concat the dynamic text to the level text - to make one banner.
             bannerText = dText + ' ' + text[txt];
         }
