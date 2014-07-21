@@ -42,3 +42,6 @@ You are then able to attach a classification to the body tag:
 ```html
 <body ozp-classification="U-FOUO">...</body>
 ```
+
+## Bower
+You can use the plugin or directive with Bower. Install with `bower install ozone-development/ozp-classification`.
