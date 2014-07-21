@@ -1,0 +1,26 @@
+{
+  "name": "ozp-classification",
+  "main": [
+    "jquery.classification.js",
+    "ozp-classification.js"
+  ],
+  "version": "0.0.1",
+  "homepage": "https://github.com/ozone-development/ozp-classification",
+  "authors": [
+    "Ozone Developers"
+  ],
+  "description": "A set of utilities handling injection of security banners into an HTML page",
+  "license": "Apache-2.0",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "~2.1.1",
+    "angular": "~1.2.20"
+  }
+}
