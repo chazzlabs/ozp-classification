@@ -33,7 +33,7 @@ var defaults = settings = {
 ## Angular Directive
 If you want to use this with AngularJS, we also provide a directive in `ozp-classification.js`. Include this file along plugin dependencies and inject the `ozpClassification` module into your application's module.
 
-```javascriopt
+```javascript
 angular.module('myApp', [ 'ozpClassification' ]);
 ```
 
