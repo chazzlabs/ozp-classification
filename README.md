@@ -45,3 +45,12 @@ You are then able to attach a classification to the body tag:
 
 ## Bower
 You can use the plugin or directive with Bower. Install with `bower install ozone-development/ozp-classification`.
+
+## CSS
+You will probably need to add something like this to your css:
+```
+body > div.classBanner:last-of-type {
+    position: absolute;
+    bottom: 0px;
+}
+```
