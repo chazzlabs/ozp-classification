@@ -10,29 +10,28 @@
     color: #f9f9f9;
     background-color: #4f5457;
 }
-/*
-.U-FOUO {
+
+.U-FOUO.classBanner {
     background-color: #009900;
 }
 
-.Conf {
+.Conf.classBanner {
     background-color: #0000FF;
 }
 
-.Secret {
+.Secret.classBanner {
     background-color: #FF0000;
 }
 
-.TopSecret-Orange {
+.TopSecret-Orange.classBanner {
     background-color: #FF6600;
 }
 
-.TopSecret-Yellow {
+.TopSecret-Yellow.classBanner {
     background-color: #FFFF00;
     color: black;
 }
 
-.Dynamic {
+.Dynamic.classBanner {
     background-color: #000000;
 }
-*/

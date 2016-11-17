@@ -3,10 +3,10 @@
 
 /**
  * jQuery.classification.js
- * 
+ *
  * This is a jQuery plugin that creates classification banners on an HTML document.
  *
- * This plugin is used by a call to the jQuery function and can be chained. It takes string 
+ * This plugin is used by a call to the jQuery function and can be chained. It takes string
  * parameters that are methods, or it can take a configuration object with your desired settings.
  * The plugin works by injecting divs onto the body element.
  * Ex: $(document).classification({ dynamic: true, level: 'S-2P' })
@@ -129,13 +129,13 @@
     /**
      * @cfg $.fn.classification.defaults {Object}
      * Classification plugin default settings.
-     * 
+     *
      * @cfg $.fn.classification.defaults.dynamic {Boolean} [dynamic = false]
      * True if you want to display "Dynamic page" in the banner.
-     * 
+     *
      * @cfg $.fn.classification.level {String} [level = 'U-FOUO']
      * A string representing the classification level, any compartments, and dissemination.
-     * 
+     *
      * @cfg $.fn.classification.defaults.dynamicBanner {Boolean} [dynamicBanner = false]
      * True if a separate banner is needed for dynamic content.
      *
@@ -146,7 +146,8 @@
         dynamic: false,
         level: 'U-FOUO',
         dynamicBanner: false,
-        tsOrange: false
+        tsOrange: false,
+        colorBanners: false
     };
 
     /**
@@ -162,8 +163,9 @@
         var txt = settings.level;
         var level = txt.charAt(0);
         var bannerText = text[txt];
+        var bannerClass = 'classBanner';
 
-        // If no dynamic banner is desired and dynamic text is desired ... 
+        // If no dynamic banner is desired and dynamic text is desired ...
         if (!settings.dynamicBanner && settings.dynamic) {
             // then we concat the dynamic text to the level text - to make one banner.
             bannerText = dText + ' ' + text[txt];
@@ -175,22 +177,30 @@
             if (settings.tsOrange) {
                 tsColor = 'Orange'
             }
-            head = $(divText).addClass('classBanner TopSecret-' + tsColor).html(bannerText);
-            foot = $(divText).addClass('classBanner TopSecret-' + tsColor).html(bannerText);
+
+            if (settings.colorBanners) {
+                bannerClass += ' TopSecret-' + tsColor;
+            }
             break;
         case 'S':
-            head = $(divText).addClass('classBanner Secret').html(bannerText);
-            foot = $(divText).addClass('classBanner Secret').html(bannerText);
+            if (settings.colorBanners) {
+                bannerClass += ' Secret';
+            }
             break;
         case 'C':
-            head = $(divText).addClass('classBanner Conf').html(bannerText);
-            foot = $(divText).addClass('classBanner Conf').html(bannerText);
+            if (settings.colorBanners) {
+                bannerClass += ' Conf';
+            }
             break;
         case 'U':
-            head = $(divText).addClass('classBanner U-FOUO').html(bannerText);
-            foot = $(divText).addClass('classBanner U-FOUO').html(bannerText);
+            if (settings.colorBanners) {
+                bannerClass += ' U-FOUO';
+            }
             break;
         }
+
+        head = $(divText).addClass(bannerClass).html(bannerText);
+        foot = $(divText).addClass(bannerClass).html(bannerText);
 
         // Add header
         var $body = $('body');

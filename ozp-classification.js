@@ -6,7 +6,15 @@ angular.module('ozpClassification', [])
         return {
             restrict: 'A',
             link: function(scope, element, attrs) {
-                element.classification({ level: attrs.ozpClassification });
+                var options = {
+                    level: attrs.ozpClassification
+                };
+
+                if (!angular.isUndefined(attrs.ozpColorBanners)) {
+                    options.colorBanners = attrs.ozpColorBanners;
+                }
+
+                element.classification(options);
             }
         };
     });
