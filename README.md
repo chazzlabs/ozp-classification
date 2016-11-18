@@ -9,13 +9,13 @@ The core of these utilities is the jQuery plugin, contained in `jquery.classific
 
 ```javascript
 $(function(){
-    $(document).classification({ 
-        level: "U" 
+    $(document).classification({
+        level: "U"
     });
 });
 ```
 
-### Settings 
+### Settings
 The plugin settings and defaults are:
 ```javascript
 var defaults = settings = {
@@ -26,7 +26,9 @@ var defaults = settings = {
     // If dynamic above is true, do we want two bars to represent the classification
     dynamicBanner: false,
     // What color should "Top Secret" be? Default is yellow, orange if this is true
-    tsOrange: false
+    tsOrange: false,
+    // Banner backgrounds are not colored by default; set to true to color by classification level
+    colorBanners: false
 };
 ```
 
@@ -41,6 +43,12 @@ You are then able to attach a classification to the body tag:
 
 ```html
 <body ozp-classification="U-FOUO">...</body>
+```
+
+Set the `ozp-color-banners` attribute to true to enable colored banner backgrounds:
+
+```html
+<body ozp-classification="U-FOUO" ozp-color-banners="true">...</body>
 ```
 
 ## Bower
