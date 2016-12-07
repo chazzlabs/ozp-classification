@@ -8,12 +8,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/ozone-development/ozp-classification"
+    "url": "https://github.com/ozoneplatform/ozp-classification"
   },
   "author": "emosher",
   "license": "Apache-2.0",
   "bugs": {
-    "url": "https://github.com/ozone-development/ozp-classification/issues"
+    "url": "https://github.com/ozoneplatform/ozp-classification/issues"
   },
-  "homepage": "https://github.com/ozone-development/ozp-classification"
+  "homepage": "https://github.com/ozoneplatform/ozp-classification"
 }

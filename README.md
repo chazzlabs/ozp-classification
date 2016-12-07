@@ -52,7 +52,7 @@ Set the `ozp-color-banners` attribute to true to enable colored banner backgroun
 ```
 
 ## Bower
-You can use the plugin or directive with Bower. Install with `bower install ozone-development/ozp-classification`.
+You can use the plugin or directive with Bower. Install with `bower install ozoneplatform/ozp-classification`.
 
 ## CSS
 The CSS assumes the banners will be attached to the body tag. If you want the bottom banner to appear at the bottom of the rendering window, you will probably need to add something like this to your css:
